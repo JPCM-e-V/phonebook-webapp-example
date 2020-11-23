@@ -1,0 +1,7 @@
+<h2>Contact:</h2>
+<div><span>name: {{contact.name}}</span>
+</div>
+<div>
+<label>phonenumber: <input [(ngModel)]="contact.phoneNumber" placeholder="phoneNumber"/></label></div>
+<button (click)=save()>Update contact</button>
+<button (click)=delete()>Delete contact</button>
