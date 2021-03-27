@@ -9,8 +9,8 @@ export class PhonebookService {
 
   constructor(private http:HttpClient) { }
 
-  list(): Observable<Contact[]> {
-    var url = 'http://localhost:5000/list';
+  list(offset: number, pagesize: number): Observable<Contact[]> {
+    var url = `http://localhost:5000/list/${offset}/${pagesize}` ;
     return this.http.get<Contact[]>(url);
   }
 
